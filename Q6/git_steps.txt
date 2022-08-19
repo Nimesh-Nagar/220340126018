@@ -1,0 +1,9 @@
+1 create repo in github
+2. name of repo Nimesh-Nagar/220340126018
+3. git clone <pase git http code>
+4. git add .
+5. git commit -m "exam" 
+6. git push orign masters
+
+
+url  https://github.com/Nimesh-Nagar/220340126018.git
