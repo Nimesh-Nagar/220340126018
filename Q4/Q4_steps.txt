@@ -1,0 +1,18 @@
+1. create python code to take user inpute and perform square of two numbers.
+
+2. now create a Dockerfile and add following necessary command in it
+---> take a image name from docker hub
+---> create dir in container by using WORKDIR command
+---> copy all necessary file to docker by using COPY command
+
+3. final step
+run Dockerfile using command 
+-- sudo docker built -t q4app:v1 .
+-- sudo docker run -it q4app:v1
+
+
+4. now push image to docker hub
+ docker push nimesh22:v1
+
+
+

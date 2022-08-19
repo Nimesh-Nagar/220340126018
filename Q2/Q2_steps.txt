@@ -1,0 +1,61 @@
+1 login to your AWS account.
+2. serach for EC2 in search for service.
+3, go to EC2 instance
+4. go to Lanch Instance --> Lanch Instance
+5. give name of instance you want to create --> Q2_ec2
+6. select OS --> ubuntu 20.04 
+7. select Instance type --> t2.micro
+8. create key pair and enter name of key -->Q2_pin
+--- Key pair type should be RSA
+---select .pem as private key file formate
+--- clicke on create key pair 
+note: Q2_pin.pem file will be downloaded keep this file on different directory as this key wil required while login in to you EC2 instance (VM).
+
+9. now in network setting Allow SSH traffic from anywhere ie. 0.0.0.0/0
+
+10. storage configuration will br 8 GB
+
+11 . click on launch instance your EC2 instance will be created and wait untill instance status shows Instance state.
+
+12. now for communication with EC2 instance go to security tab in you instance.
+	-- Inbound rules --> edit Inbound rules
+	-- now ADD rules in it 
+	-- port no 22 , 188 should listen on any ip address
+	-- dont forget to click save rules
+	
+13. very important step open terminla in which .pem file is store and enter command to change permissiopo of .pem file
+ ----- $ sudo chmod 400 Q2_pin.pem	
+
+14. NOw run you instances using ssh comand
+---- ssh -i "Q2_pin.pem" ubuntu@ec2-65-2-79-180.ap-south-1.compute.amazonaws.com
+
+15. hurray we can now access our AWS EC2 instance which w have created..
+
+16. sudo apt install mosquitto
+
+17. now on our linux machine run foloowing commands
+	-- mosquitto_sub -t test -h 65.2.79.180 -p 1883 -d
+	-- mosquitto_pub -t test -h 65.2.79.180 -p 1883 -m "hello" -d
+	
+18. screen shots of output is in mqtt_broker
+
+19. we have successfull connected to AWS EC2 Mqtt Broker	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

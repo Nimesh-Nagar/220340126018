@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+    broker :
+        image : eclipse-mosquitto
+        hostname : broker
+        container_name : mqtt_broker
+        expose :
+            - "1883"
+        ports :
+            - 6500:1883
+        volumes :
+            - /home/rajesh/Desktop/edge_cloud_exam/nimesh/Q5/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    publisher_q :
+        build : ./publisher
+        container_name : publisher_q
+        hostname : publisher
+        depends_on :
+            - broker

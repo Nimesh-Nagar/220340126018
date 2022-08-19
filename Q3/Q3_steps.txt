@@ -1,0 +1,10 @@
+1. login to your root user account 
+2. go to IAM 
+3. create new user  dev-iot 
+4. give permissions of AmazonCE2FullAccess and attach existing policies directly 
+
+5 .you have successfull created a user with only EC2 instance permission.
+6. when user will try to access another service then he/she cannot acess other permissions
+
+all screen shorts are attached ...
+
